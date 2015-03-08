@@ -470,6 +470,34 @@ You should return Qty of remaining lamps in an array.
 N = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], K=3, P=[2,3,8] // return 8
 </pre>
 </code>
+
+<h2>Part 2</h3>
+<strong>
+  <ul>
+    <li>Do not use any 3rd party libraries, frameworks, just pure JS and CSS.</li>
+    <li>Each function and method should be commented.</li>
+    <li>Use NODE.js for http server</li>
+  </ul>
+</strong>
+<p> You have Design Mock Up (see PDF) and you are responsible for UI implementation. 
+Example of test data is represented into JSON file. This data is required to build a table:</p>
+<p>First table (Sync Journal):</p>
+<p>For each syncDate you should show:</p>
+<p>a) Qty of JSON objects in column - sync elements;</p>
+<p>b) State if at least one status == ERROR return Failed , if OK >>  ok,</p>
+<p>с) Сonflicts - number of elements with status == Conflict</p>
+
+<p>Second table (contains details of synchronization ‘Sync Details’):</p>
+<p>If user clicks on the row in the first table the second one shows IDs that grouped by Type.</p>
+
+<p>The design has ‘Start Sync’ button  and click on the button should send http request to load new data into the first table. Animation of request/loader should be synchronized with request (data should be added to the table if animation finished).</p>
+
+<p>For ‘Sync Mode’ select: if ‘Scheduled’ selected user should see ‘Schedule’ table (table is just a mock).</p>
+<p>Also, the test app should have custom ‘back’ and ‘next’ button to appropriate screen.</p>
+
+
+
+
         </section>
 
         <aside id="sidebar">
