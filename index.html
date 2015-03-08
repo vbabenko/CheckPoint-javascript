@@ -480,7 +480,7 @@ N = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], K=3, P=[2,3,8] // retu
     <li><strong>Use NODE.js for http server</strong></li>
   </ul>
 <p> You have <a href="https://github.com/hata69/CheckPoint-javascript/blob/gh-pages/DataSyncMockUp.pdf">Design Mock Up (see PDF)</a> and you are responsible for UI implementation. 
-Example of test data is represented into <a href="https://github.com/hata69/CheckPoint-javascript/blob/gh-pages/sync_journal.json">JSON file</a>. This data is required to build a table:</p>
+Example of test data is represented into <a href="https://github.com/hata69/CheckPoint-javascript/blob/gh-pages/sync_journal.json">JSON file</a> It also available by GET request <a href="https://demo8884132.mockable.io/sync_journal">GET /sync_journal</a>. This data is required to build a table:</p>
 <p>First table (Sync Journal):</p>
 <p>For each syncDate you should show:</p>
 <ul>
@@ -502,7 +502,7 @@ Also, the test app should have custom ‘back’ and ‘next’ button to approp
 <p>1) Global route - app.js that will be responsible for managing js modules.</p>
 <p>It also includes a module deletion and initialization. You can load a module, for example, by ID, that is wired up with some element ( in our case it’s ‘synchronize’  - see Design Mock Up pdf ) and this ID is used into SCREEN_MANAGER.js like a key of object.  
 If a user opens some page, the app.js loads a module and initializes it.
-Initialized module starts load required template and calls .render() method. The app.js should be available for all pages. 
+Initialized module starts load required template and calls .render() method that responsible for data (json) and showing the results. The app.js should be available for all pages. 
 If user leaves from particular page the route should destroy attached modules.</p>
 <p>2) Page module - a class that is responsible for logic of the whole page (rendering, calculations etc).</p>
 <p>3) “SCREEN_MANAGER.js” contains path information about your js/html/css. This is plain object where a ‘key’ is module ID. This object should be available for all pages like app.js.</p>
