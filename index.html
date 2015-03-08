@@ -318,18 +318,30 @@
   <li>Each function and method should be commented.</li>
 </ul>
 
-<h3>Task #1</h3>
+<h3>Task № 1</h3>
 
 <p>
   Please write a function <code>compile_csv_search(text, key_name)</code> that parses text in
-the CSV format. 
-(   You are not required to handle quoting and escaping in values;
-assume field values never contain commas or other special characters.)
+the CSV format. </p>
+<p>(   You are not required to handle quoting and escaping in values;
+assume field values never contain commas or other special characters.)</p>
 
-Your function must return a function that looks up a record by a value of the
+<p>Your function must return a function that looks up a record by a value of the
 field specified as the second argument to <code>compile_csv_search</code>. Assume that all
-values in the key field are unique.
-</p>
+values in the key field are unique.</p>
+<p><strong>Sample usage:</strong></p>
+<pre>
+<code>
+var csv_by_name = compile_csv_search(
+    "ip,name,desc\n"+
+    "10.49.1.4,server1,Main Server\n"+
+    "10.52.5.1,server2,Backup Server\n",
+    "name");
+console.log(csv_by_name("server2"));// >>> {ip: "10.52.5.1", name: "server2", desc: "Backup Server"}
+console.log(csv_by_name("server9")); // >>> undefined
+</code>
+</pre>
+
 
 <h3>
 <a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
