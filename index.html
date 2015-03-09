@@ -463,13 +463,17 @@ Implement ‘merge sort’ (it’s type of sorting) for voluntary array, but onl
 
 <h3>Task № 6</h3>
 <p>
-You have array of lamp, which are numbered from 1 to N. By default all lights are not illuminated. Also you have argument <K> that will activate each lamp with step <K>. For example,  N =  from 1 to 10, K=3, so, you should activate the following values: 3, 6, 9.  Third argument is an array that will specify start point for K.
-You should return Qty of remaining lamps in an array.
+You have an array of lamps, which are numbered from 1 to N. By default all lights are switched off. 
+You are iterating throught the array with some step k and switch the light in the current lamp (turn on/off light depending on lamp's previous state).
+The third input param is an array of steps you should iterate lamps array with.
+For example,  N =  from 1 to 10, steps array is [2, 3]. All lamps are swtiched off. So, you should turn on the following lamps: №2, 4, 6, 8, 10 on the first iteration 
+and switch lights in lamp №3, 6, 9 on the second. So, the 6th lamp will be switched off at the end (switched twice). 
+You should return quantity of switched off lamps in an array.
 </p>
 <p><strong>Example:</strong></p>
 <pre>
 <code>
-N = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], K=3, P=[2,3,8] // return 8
+N = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], P=[2,3,8] // return 12
 </pre>
 </code>
 
